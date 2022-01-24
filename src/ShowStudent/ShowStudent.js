@@ -44,33 +44,33 @@ export const ShowStudent = () => {
 
 
     return (
-         <div >
+         <div>
            <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            <StyledTableCell align="right">Calories</StyledTableCell>
-            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+            
+            <StyledTableCell align="right">ID</StyledTableCell>
+            <StyledTableCell align="right">Name</StyledTableCell>
+            <StyledTableCell align="right">Department</StyledTableCell>
+            <StyledTableCell align="right">Year</StyledTableCell>
+            <StyledTableCell align="right">Action</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {studAr.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.id}</StyledTableCell>
-              <StyledTableCell align="right">{row.department}</StyledTableCell>
-              <StyledTableCell align="right">{row.year}</StyledTableCell>
+          {studAr.map((student) => (
+            <StyledTableRow key={student.name}>
+              
+              <StyledTableCell align="right">{student.id}</StyledTableCell>
+              <StyledTableCell align="right">{student.name}</StyledTableCell>
+              <StyledTableCell align="right">{student.department}</StyledTableCell>
+              <StyledTableCell align="right">{student.year}</StyledTableCell>
               <StyledTableCell align="right">
-              <NavLink to={`/student/update/${row.id}`}>
+              <NavLink to={`/student/update/${student.id}`}>
               <Button variant="contained">Update</Button>
 
               </NavLink>
-              <NavLink to={`/students/delete/${row.id}`}>
+              <NavLink to={`/students/delete/${student.id}`}>
               <Button variant="contained" style={{marginLeft:'5px'}}>Delete</Button>
 
               </NavLink>
