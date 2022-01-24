@@ -46,7 +46,7 @@ export let Nav = () => {
                 <input type="number" onChange={update} value={searchId} placeholder="Enter ID "></input>
                 <NavLink to={`/student/search/${searchId}`}> 
                 <Button color="primary" variant="contained">
-                       Show Records
+                       Search Record
                     </Button>
                 </NavLink>
             </div>
