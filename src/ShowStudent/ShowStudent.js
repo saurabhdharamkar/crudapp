@@ -22,7 +22,7 @@ export const ShowStudent = () => {
                         <th>Name</th>
                         <th>Department</th>
                         <th>Year</th>
-                        
+                        <th>Action</th>
                         
                     </tr>
                 </thead>
